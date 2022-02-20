@@ -1,7 +1,7 @@
 import fs from "fs";
 import { artifacts } from "hardhat";
 
-export function saveFrontendFiles(address: string, artifact: string) {
+export function saveFrontendFiles(artifact: string) {
   // eslint-disable-next-line node/no-path-concat
   const abiDir = __dirname + "/../dist";
   if (!fs.existsSync(abiDir)) fs.mkdirSync(abiDir);
@@ -12,7 +12,6 @@ export function saveFrontendFiles(address: string, artifact: string) {
     `${abiDir}/${artifact}.json`,
     JSON.stringify(
       {
-        address,
         abi,
       },
       null,

@@ -32,7 +32,7 @@ async function main() {
   // await (await swipePayment.connect(deployer).setDepositFee("100")).wait(); // 1%
 
   // save frontend files
-  saveFrontendFiles(sleek.address, "Sleek");
+  saveFrontendFiles("Sleek");
 }
 
 // We recommend this pattern to be able to use async/await everywhere
